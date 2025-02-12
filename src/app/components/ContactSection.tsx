@@ -1,51 +1,33 @@
-"use client"
-import { useState } from "react"
-import { motion } from "framer-motion"
+"use client";
+import { useState } from "react";
 
 const ContactSection = () => {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Here you would typically send the form data to a server
-    console.log("Form submitted:", { name, email, message })
-    // Reset form fields
-    setName("")
-    setEmail("")
-    setMessage("")
-    setIsSubmitted(true)
-  }
+    e.preventDefault();
+    console.log("Form submitted:", { name, email, message });
+    setName("");
+    setEmail("");
+    setMessage("");
+    setIsSubmitted(true);
+  };
 
   return (
     <section id="contact" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-12"
-        >
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Get in Touch
-        </motion.h2>
+        </h2>
         {isSubmitted ? (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center text-xl text-green-600"
-          >
+          <div className="text-center text-xl text-green-600">
             Thank you for your message! I'll get back to you soon.
-          </motion.div>
+          </div>
         ) : (
-          <motion.form
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            onSubmit={handleSubmit}
-            className="max-w-lg mx-auto"
-          >
+          <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
             <div className="mb-4">
               <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
                 Name
@@ -91,12 +73,11 @@ const ContactSection = () => {
             >
               Send Message
             </button>
-          </motion.form>
+          </form>
         )}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactSection
-
+export default ContactSection;
