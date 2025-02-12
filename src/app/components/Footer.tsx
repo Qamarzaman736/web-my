@@ -1,7 +1,5 @@
-import Link from "next/link"
-import { FaTiktok, FaGithub } from "react-icons/fa"
-import { SiVercel } from "react-icons/si"
-import type React from "react"
+"use client";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -12,27 +10,35 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} AI Expert. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <SocialLink href="https://www.tiktok.com/@arainzadaa04?_t=ZS-8teo8ElHaqu&_r=1" icon={FaTiktok} label="TikTok" />
-            <SocialLink href="https://github.com/Qamarzaman736" icon={FaGithub} label="GitHub" />
-            <SocialLink href="https://vercel.com/yourusername" icon={SiVercel} label="Vercel" />
+            <Link
+              href="https://www.tiktok.com/@arainzadaa04?_t=ZS-8teo8ElHaqu&_r=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+            >
+              TikTok
+            </Link>
+            <Link
+              href="https://github.com/Qamarzaman736"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+            >
+              GitHub
+            </Link>
+            <Link
+              href="https://vercel.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+            >
+              Vercel
+            </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-const SocialLink = ({ href, icon: Icon, label }: { href: string; icon: React.ElementType; label: string }) => (
-  <Link
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
-  >
-    <span className="sr-only">{label}</span>
-    <Icon className="w-6 h-6" />
-  </Link>
-)
-
-export default Footer
-
+export default Footer;

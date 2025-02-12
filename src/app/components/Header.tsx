@@ -1,8 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { motion } from "framer-motion"
-import type React from "react" // Added import for React
+import type React from "react"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,7 +22,7 @@ const Header = () => {
     >
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className={`text-2xl font-bold ${scrolled ? "text-blue-600" : "text-white"}`}>
-          QAMAR UL ZAMAN
+          Qamar ul Zaman
         </Link>
         <div className="hidden md:flex space-x-8">
           <NavLink href="#home" scrolled={scrolled}>
@@ -55,12 +54,7 @@ const Header = () => {
         </button>
       </nav>
       {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className="md:hidden bg-white shadow-md"
-        >
+        <div className="md:hidden bg-white shadow-md">
           <div className="container mx-auto px-4 py-2 flex flex-col space-y-2">
             <NavLink href="#home" onClick={() => setIsOpen(false)} scrolled={true}>
               Home
@@ -78,7 +72,7 @@ const Header = () => {
               Contact
             </NavLink>
           </div>
-        </motion.div>
+        </div>
       )}
     </header>
   )
@@ -89,10 +83,17 @@ const NavLink = ({
   children,
   onClick,
   scrolled,
-}: { href: string; children: React.ReactNode; onClick?: () => void; scrolled: boolean }) => (
+}: {
+  href: string
+  children: React.ReactNode
+  onClick?: () => void
+  scrolled: boolean
+}) => (
   <Link
     href={href}
-    className={`text-lg font-medium hover:text-blue-600 transition-colors duration-200 ${scrolled ? "text-gray-800" : "text-white"}`}
+    className={`text-lg font-medium hover:text-blue-600 transition-colors duration-200 ${
+      scrolled ? "text-gray-800" : "text-white"
+    }`}
     onClick={onClick}
   >
     {children}
