@@ -24,7 +24,7 @@ const HomeSection = () => {
         </div>
         <div className="md:w-1/2 flex justify-center">
           <Image
-            src="/q.jpg"
+            src="/a.jpg"
             alt="AI Expert"
             width={400}
             height={400}

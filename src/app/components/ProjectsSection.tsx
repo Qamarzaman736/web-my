@@ -5,28 +5,28 @@ const projects = [
   {
     title: "custom GPT",
     description:
-      "Developed a deep learning model for real-time object detection and classification in images and video streams.",
+      "A generator in AI is a deep learning model that generates new, synthetic data or content, such as images, text, or music.",
     link: "https://github.com/yourusername/image-recognition",
     image: "/g.png",
   },
   {
     title: "Next.js Developer",
     description:
-      "Created an intelligent chatbot using NLP techniques to understand and respond to user queries in multiple languages.",
+      "Next.js is a popular React-based framework for building server-rendered, statically generated, and performance-optimized web applications.",
     link: "https://github.com/yourusername/nlp-chatbot",
     image: "/n.webp",
   },
   {
     title: "Web Development",
     description:
-      "Implemented machine learning algorithms to predict stock prices and market trends with high accuracy.",
+      "Web development: Building and maintaining websites and web applications using programming languages, frameworks, and databases to create interactive and dynamic online experiences.",
     link: "https://github.com/yourusername/finance-predictor",
     image: "/w.jpeg",
   },
   {
     title: "Digital Marketing",
     description:
-      "Developed an AI system for autonomous drone navigation using computer vision and reinforcement learning.",
+      "Digital marketing: Promoting products, brands, and services using digital channels like search engines, social media, email, and websites to reach target audiences and drive online sales and engagement.",
     link: "https://github.com/yourusername/drone-navigation",
     image: "/d.jpeg",
   },

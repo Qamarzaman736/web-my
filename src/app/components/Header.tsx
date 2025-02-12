@@ -22,7 +22,7 @@ const Header = () => {
     >
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className={`text-2xl font-bold ${scrolled ? "text-blue-600" : "text-white"}`}>
-          Qamar ul Zaman
+          Amir Nazeer
         </Link>
         <div className="hidden md:flex space-x-8">
           <NavLink href="#home" scrolled={scrolled}>

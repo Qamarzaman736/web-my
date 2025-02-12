@@ -11,7 +11,7 @@ const Footer = () => {
           </p>
           <div className="flex space-x-6">
             <Link
-              href="https://www.tiktok.com/@arainzadaa04?_t=ZS-8teo8ElHaqu&_r=1"
+              href="https://www.tiktok.com/@amirnazeer241?_t=ZT-8trMmhc761G&_r=1"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
@@ -19,7 +19,7 @@ const Footer = () => {
               TikTok
             </Link>
             <Link
-              href="https://github.com/Qamarzaman736"
+              href="https://github.com/amirnazeer092"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
